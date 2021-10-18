@@ -55,5 +55,5 @@ Read this article for this : https://material.io/design/color/color-usage.html#h
     implementation "androidx.datastore:datastore-preferences:$datastore_v"
 ```
 
-
+### You can read the detail in this article : https://medium.com/@kyawlinnthantkyawlinnthant/android-dark-theme-in-the-easiest-way-e82806c7331c
 
