@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,11 +36,32 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.6.0'
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    def core_version = '1.6.0'
+    implementation "androidx.core:core-ktx:$core_version"
+
+    def fragment_ktx = '1.3.6'
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx"
+
+    def viewModel_scope = '2.3.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModel_scope"
+
+    def coroutines_v = '1.5.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_v"
+
+    def ui_version = '1.3.1'
+    implementation "androidx.appcompat:appcompat:$ui_version"
+
+    def material_version = '1.4.0'
+    implementation "com.google.android.material:material:$material_version"
+
+    def layout_version = '2.1.1'
+    implementation "androidx.constraintlayout:constraintlayout:$layout_version"
+
+    def datastore_v = '1.0.0'
+    implementation "androidx.datastore:datastore-preferences:$datastore_v"
+
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 }
